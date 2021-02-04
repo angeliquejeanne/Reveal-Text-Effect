@@ -1,0 +1,81 @@
+body
+{
+    margin: 0;
+    background-color: #000;
+}
+*
+{
+    box-sizing: border-box;
+}
+a
+{
+    color: pink;
+    text-decoration: none;
+}
+.box
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%); 
+}
+.box .heading
+{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.box .heading span
+{
+    font-size: 127px;
+    color: pink;
+}
+.box .line
+{
+    height: 5px;
+    background-color: thistle;
+}
+.box.reveal .line
+{
+    animation: lineIn 2s linear forwards;
+}
+@keyframes lineIn 
+{
+    0%{
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.box .sub-heading
+{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    font-weight: normal;
+}
+.box .sub-heading span
+{
+    font-size: 60px;
+    color: thistle;
+    display: inline-block;
+}
+.box.reveal .sub-heading span
+{
+    opacity: 0;
+    animation: subHeadInTop 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes subHeadInTop
+{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
